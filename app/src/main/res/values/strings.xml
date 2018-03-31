@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Final Project</string>
+    <string name="Lang">Это приложение поможет вам выбрать высшее учебное заведение по региону, предметам, специальностям и баллам ЕГЭ.</string>
+    <string name="Cont">Продолжить→</string>
+    <string name="region">Регион</string>
+    <string name="impregion">Введите название региона...</string>
+    <string name="nap">Направление</string>
+    <string name="imnap">Введите название направления...</string>
+</resources>
