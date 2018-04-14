@@ -18,18 +18,13 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-
-        List<String> spinnerArray = new ArrayList<>();
-        spinnerArray.add("Неважно");
-        spinnerArray.add("Бюджетное");
-        spinnerArray.add("Коммерческое");
-
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_spinner_item, spinnerArray);
+        ArrayAdapter<?> adapter = ArrayAdapter.createFromResource(this, R.array.Predmiti ,
+                android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        @SuppressLint("WrongViewCast") NoDefaultSpinner spinner = findViewById(R.id.spinner3);
+
+        Spinner spinner = findViewById(R.id.spinner3);
         spinner.setAdapter(adapter);
+        spinner.setSelection(1);
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
@@ -37,20 +32,22 @@ public class Main2Activity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view,
                                        int position, long id) {
                 Object item = adapterView.getItemAtPosition(position);
-                if (item == "Бюджет" || item == "Неважно") {
-                    @SuppressLint("WrongViewCast") NoDefaultSpinner spin = findViewById(R.id.spinner4);
-                    spin.setAlpha(0);
-                    /*if(item == "Бюджет") {
-                        //Тут фильтр на базу данных
-                    } else {
-                        //Тут фильтр на базу данных
-                    }*/
-                }
-                if (item == "Коммерческое") {
-                    @SuppressLint("WrongViewCast") NoDefaultSpinner spin = findViewById(R.id.spinner4);
-                    spin.setAlpha(1);
-                    //Тут фильтр на базу данных
-                }
+
+//                if (item == "Бюджет" || item == "Неважно") {
+//                    Spinner spin = findViewById(R.id.spinner4);
+//                    spin.setVisibility(View.GONE);
+//                    spin.setEnabled(false);
+//                    /*if(item == "Бюджет") {
+//                        //Тут фильтр на базу данных
+//                    } else {
+//                        //Тут фильтр на базу данных
+//                    }*/
+//                }
+//                if (item == "Коммерческое") {
+//                    Spinner spin = findViewById(R.id.spinner4);
+//                    spin.setAlpha(1);
+//                    //Тут фильтр на базу данных
+
             }
 
             @Override

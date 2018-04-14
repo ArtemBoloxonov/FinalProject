@@ -6,4 +6,15 @@
     <string name="impregion">Введите название региона...</string>
     <string name="nap">Направление</string>
     <string name="imnap">Введите название направления...</string>
+    <string-array name="Predmiti">
+        <item>Физика</item>
+        <item>Математика</item>
+        <item>Русский язык</item>
+        <item>Химия</item>
+        <item>История</item>
+        <item>Обществознание</item>
+        <item>География</item>
+        <item>Иностранный язык</item>
+        <item>Биология</item>
+    </string-array>
 </resources>
